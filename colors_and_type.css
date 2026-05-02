@@ -1,0 +1,302 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Sahil Rao Personal Site — Design Tokens
+   Editorial, type-led, oxblood-accented. Quiet on purpose.
+   ────────────────────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* ─── Color: ink on paper, one oxblood ───────────────────────────────── */
+  --paper:        #F4F1EA;   /* page bg */
+  --paper-deep:   #EBE7DD;   /* rare surface lift (pull-quote bg) */
+  --ink:          #1A1714;   /* primary text */
+  --ink-soft:     #5A544D;   /* secondary text, captions */
+  --ink-faint:    #9C958A;   /* tertiary, mono labels */
+  --rule:         #D8D2C5;   /* hairline borders */
+  --accent:       #7A1C1C;   /* oxblood — hover/focus/numerals only */
+  --accent-hover: #5C1414;   /* pressed accent */
+
+  /* Semantic aliases */
+  --bg:               var(--paper);
+  --surface:          var(--paper);
+  --surface-deep:     var(--paper-deep);
+  --text-primary:     var(--ink);
+  --text-secondary:   var(--ink-soft);
+  --text-tertiary:    var(--ink-faint);
+  --border:           var(--rule);
+  --link:             var(--ink);
+  --link-hover:       var(--accent);
+
+  /* ─── Type families ──────────────────────────────────────────────────── */
+  --font-display: "Instrument Serif", "Tiempos Headline", "GT Sectra", Georgia, serif;
+  --font-body:    "Geist", "Söhne", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", "IBM Plex Mono", "Berkeley Mono", ui-monospace, monospace;
+
+  /* ─── Type scale (px) ─────────────────────────────────────────────────── */
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 16px;
+  --fs-md:   20px;
+  --fs-lg:   28px;
+  --fs-xl:   40px;
+  --fs-2xl:  64px;
+  --fs-3xl:  96px;
+
+  --lh-display: 1.08;
+  --lh-tight:   1.2;
+  --lh-body:    1.6;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --tracking-display: -0.01em;
+  --tracking-mono:    -0.005em;
+  --tracking-caps:     0.08em;
+
+  /* ─── Spacing (4px base) ─────────────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-24:  96px;
+  --space-32:  128px;
+  --space-48:  192px;
+  --space-64:  256px;
+
+  /* ─── Radii ──────────────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* ─── Hairline / shadow (intentionally minimal) ──────────────────────── */
+  --hairline: 1px solid var(--rule);
+  --hairline-strong: 1px solid var(--ink-faint);
+  --shadow-1: inset 0 -1px 0 var(--rule); /* tokenized for semantic clarity */
+
+  /* ─── Motion ─────────────────────────────────────────────────────────── */
+  --motion-fast: 120ms;
+  --motion-base: 240ms;
+  --motion-slow: 480ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ─── Layout ─────────────────────────────────────────────────────────── */
+  --content-max: 1280px;
+  --gutter:      24px;
+  --margin:      64px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Base resets — semantic CSS so design carries through to plain HTML
+   ────────────────────────────────────────────────────────────────────────── */
+
+html {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+/* ─── Display headings (Instrument Serif) ──────────────────────────────── */
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--lh-display);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: var(--fs-2xl);     /* 64 */
+  letter-spacing: -0.015em;
+}
+
+h2, .h2 {
+  font-size: var(--fs-xl);      /* 40 */
+}
+
+h3, .h3 {
+  font-size: var(--fs-lg);      /* 28 */
+  line-height: var(--lh-tight);
+}
+
+/* ─── Editorial labels — small, mono, all-caps tracking ────────────────── */
+
+.eyebrow,
+.label-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* ─── Body & secondary copy ────────────────────────────────────────────── */
+
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.body-lg {
+  font-size: var(--fs-md);
+  line-height: 1.5;
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ─── Mono — dates, venues, repos, numerals ────────────────────────────── */
+
+.mono,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.94em;            /* mono runs hot — pull it down 1 tick */
+  letter-spacing: var(--tracking-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.numeral {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "ss01";
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.numeral-xl {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xl);
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.04em;
+  font-weight: var(--fw-regular);
+  line-height: 1;
+}
+
+/* ─── Links — always underlined, accent on hover ───────────────────────── */
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: color var(--motion-fast) var(--ease),
+              text-decoration-color var(--motion-fast) var(--ease);
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration-color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Inline link variant for body prose ───────────────────────────────── */
+
+.link-inline {
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.05em;
+}
+
+/* ─── Buttons ──────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--motion-fast) var(--ease),
+              border-color var(--motion-fast) var(--ease),
+              color var(--motion-fast) var(--ease);
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.btn-primary:hover  { background: #2A2520; border-color: #2A2520; color: var(--paper); }
+.btn-primary:active { background: #0F0E0C; }
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.btn-ghost:hover  { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-ghost:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Hairline section rule ────────────────────────────────────────────── */
+
+.rule,
+hr {
+  border: 0;
+  border-top: var(--hairline);
+  margin: 0;
+}
+
+/* ─── Card primitive ───────────────────────────────────────────────────── */
+
+.card {
+  background: var(--surface);
+  border: var(--hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  transition: border-color var(--motion-fast) var(--ease);
+}
+
+.card:hover {
+  border-color: var(--ink-faint);
+}
+
+/* ─── Selection ────────────────────────────────────────────────────────── */
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}

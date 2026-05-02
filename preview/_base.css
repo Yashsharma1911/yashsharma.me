@@ -1,0 +1,31 @@
+@import url("../colors_and_type.css");
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.card-frame {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row { display: flex; align-items: center; gap: 16px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.grow { flex: 1; }
+.eyebrow-tiny {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}

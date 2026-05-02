@@ -1,0 +1,11 @@
+/* Palette A — Oxblood on warm paper (control) */
+:root {
+  --paper:        #F4F1EA;
+  --paper-deep:   #EBE7DD;
+  --ink:          #1A1714;
+  --ink-soft:     #5A544D;
+  --ink-faint:    #9C958A;
+  --rule:         #D8D2C5;
+  --accent:       #7A1C1C;
+  --accent-hover: #5C1414;
+}
