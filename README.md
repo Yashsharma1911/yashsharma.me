@@ -1,6 +1,6 @@
 # Yash Sharma — Personal Site Design System
 
-A personal website for a Senior Developer Advocate at DigitalOcean working in cloud-native and AI infrastructure. The audience is founders, DevRel directors, and engineering leaders. The site has eight seconds to land before they bounce. It must lead with **evidence**, not narrative.
+A personal website for a Developer Advocate at DigitalOcean working in cloud-native and AI infrastructure. The audience is founders, DevRel directors, and engineering leaders. The site has eight seconds to land before they bounce. It must lead with **evidence**, not narrative.
 
 This system is the visual + verbal foundation for that site.
 
@@ -74,7 +74,7 @@ How copy is written on this site. These rules are non-negotiable; they are the d
 
 | Bad (template-DevRel) | Good (this site) |
 |---|---|
-| "Welcome to my page! 🚀" | "Senior Developer Advocate. Cloud-native and AI infrastructure." |
+| "Welcome to my page! 🚀" | "Developer Advocate. Cloud-native and AI infrastructure." |
 | "I'm passionate about empowering developers" | "I work on the parts of Kubernetes most people would rather not think about." |
 | "Check out my amazing talks!" | "Three talks I'd give again, refined." |
 | "Let's connect and build the future together!" | "Email is the best way to reach me." |

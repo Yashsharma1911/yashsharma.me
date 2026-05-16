@@ -35,7 +35,7 @@ function About() {
           <div className="mt-6 pt-6 border-t border-rule grid grid-cols-3 gap-6">
             <div className="flex flex-col gap-2">
               <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-faint">currently</span>
-              <span className="text-[14px] text-ink">Senior Developer Advocate</span>
+              <span className="text-[14px] text-ink">Developer Advocate</span>
               <span className="text-[13px] text-ink-soft">Cloud-native &amp; AI infra</span>
             </div>
             <div className="flex flex-col gap-2">

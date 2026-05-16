@@ -41,7 +41,7 @@ function Hero() {
             I work on the parts of Kubernetes most people would rather not think about &mdash; and the AI infrastructure being built on top of them.
           </h1>
           <p className="text-[19px] leading-[1.5] max-w-[44ch]" style={{ color: 'var(--ink-soft)' }}>
-            Senior Developer Advocate at DigitalOcean. CNCF maintainer, Meshery. Recurring KubeCon speaker across four continents.
+            Developer Advocate at DigitalOcean. CNCF maintainer, Meshery. Recurring KubeCon speaker across four continents.
           </p>
 
           {/* Thesis line — display italic, sits between sub and credibility */}
@@ -139,7 +139,7 @@ function About() {
             <a href="mailto:hello@yashsharma.dev" className="link-inline" style={{ color: 'var(--ink)' }}>email</a>.
           </p>
           <div className="mt-6 pt-6 grid grid-cols-3 gap-6" style={{ borderTop: '1px solid var(--rule)' }}>
-            <div className="flex flex-col gap-2"><span className="font-mono text-[10px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>role</span><span className="text-[14px]" style={{ color: 'var(--ink)' }}>Senior Developer Advocate · DigitalOcean</span></div>
+            <div className="flex flex-col gap-2"><span className="font-mono text-[10px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>role</span><span className="text-[14px]" style={{ color: 'var(--ink)' }}>Developer Advocate · DigitalOcean</span></div>
             <div className="flex flex-col gap-2"><span className="font-mono text-[10px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>focus</span><span className="text-[14px]" style={{ color: 'var(--ink)' }}>AI infrastructure on Kubernetes · MCP security</span></div>
             <div className="flex flex-col gap-2"><span className="font-mono text-[10px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>writing</span><span className="text-[14px]" style={{ color: 'var(--ink)' }}>Building-in-public on LinkedIn · technical essays</span></div>
           </div>
@@ -537,7 +537,7 @@ function Footer() {
       <div className="max-w-[1280px] mx-auto px-8 lg:px-16 py-16 grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="font-display text-[28px] leading-none" style={{ color: 'var(--ink)', letterSpacing: '-0.015em' }}>Yash Sharma</span>
-          <p className="text-[14px] m-0 max-w-[42ch]" style={{ color: 'var(--ink-soft)' }}>Senior Developer Advocate at DigitalOcean. CNCF maintainer, Meshery. Hyderabad, India.</p>
+          <p className="text-[14px] m-0 max-w-[42ch]" style={{ color: 'var(--ink-soft)' }}>Developer Advocate at DigitalOcean. CNCF maintainer, Meshery. Hyderabad, India.</p>
           <a href="mailto:hello@yashsharma.dev" className="font-mono text-[13px] link-inline mt-2" style={{ color: 'var(--ink)' }}>hello@yashsharma.dev</a>
         </div>
         <div className="col-span-6 md:col-span-3 flex flex-col gap-2">

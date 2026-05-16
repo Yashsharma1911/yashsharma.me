@@ -12,7 +12,7 @@ function Hero() {
             I work on the parts of Kubernetes most people would rather not think about.
           </h1>
           <p className="text-[20px] leading-[1.5] text-ink-soft max-w-[42ch]">
-            Senior Developer Advocate. Cloud-native and AI infrastructure. CNCF maintainer.
+            Developer Advocate. Cloud-native and AI infrastructure. CNCF maintainer.
             Recurring KubeCon speaker across four continents.
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-2">

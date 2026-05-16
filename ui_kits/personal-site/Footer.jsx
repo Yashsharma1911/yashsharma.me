@@ -6,7 +6,7 @@ function Footer() {
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="font-display text-[28px] tracking-display text-ink leading-none">Sahil Rao</span>
           <p className="text-[14px] text-ink-soft m-0 max-w-[42ch]">
-            Senior Developer Advocate. Cloud-native and AI infrastructure.
+            Developer Advocate. Cloud-native and AI infrastructure.
             Bengaluru, India.
           </p>
           <a href="mailto:hello@sahil.dev" className="font-mono text-[13px] link-inline mt-2">hello@sahil.dev</a>
