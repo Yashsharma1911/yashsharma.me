@@ -23,7 +23,7 @@ function Nav() {
         <a href="#top" className="no-underline" style={{ fontFamily: 'var(--font-display)', fontSize: 22, color: 'var(--ink)', letterSpacing: '-0.01em' }}>Yash Sharma</a>
         <div className="hidden md:flex items-center gap-8">
           {links.map(l => <a key={l.href} href={l.href} className="text-[14px] no-underline transition-colors duration-150" style={{ color: 'var(--ink-soft)' }} onMouseEnter={e => e.currentTarget.style.color='var(--accent)'} onMouseLeave={e => e.currentTarget.style.color='var(--ink-soft)'}>{l.label}</a>)}
-          <a href="mailto:hello@yashsharma.dev" className="text-[14px] font-mono no-underline" style={{ color: 'var(--ink)' }}>hello@yashsharma.dev</a>
+          <a href="mailto:yashsharma2572@gmail.com" className="text-[14px] font-mono no-underline" style={{ color: 'var(--ink)' }}>yashsharma2572@gmail.com</a>
         </div>
       </div>
     </nav>
@@ -33,7 +33,7 @@ function Nav() {
 // ── Hero + Thesis ──────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section id="top" className="max-w-[1280px] mx-auto px-8 lg:px-16 pt-24 lg:pt-32 pb-16">
+    <section id="top" className="max-w-[1280px] mx-auto px-8 lg:px-16 pt-24 lg:pt-20 pb-16">
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 lg:col-span-7 flex flex-col gap-7">
           <span className="font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>yash sharma · hyderabad · works globally</span>
@@ -52,7 +52,7 @@ function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-3">
             <a href="#talks" className="inline-flex items-center gap-2 text-[14px] font-medium px-[18px] py-[10px] rounded-[4px] no-underline" style={{ background: 'var(--ink)', color: 'var(--paper)' }}>Read recent talks</a>
             <a href="#writing" className="inline-flex items-center gap-2 text-[14px] font-medium px-[18px] py-[10px] rounded-[4px] no-underline" style={{ border: '1px solid var(--rule)', color: 'var(--ink)' }}>Recent writing</a>
-            <a href="mailto:hello@yashsharma.dev" className="text-[14px] link-inline ml-2" style={{ color: 'var(--ink-soft)' }}>or email me</a>
+            <a href="mailto:yashsharma2572@gmail.com" className="text-[14px] link-inline ml-2" style={{ color: 'var(--ink-soft)' }}>or email me</a>
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 lg:pl-12 flex items-end">
@@ -60,7 +60,7 @@ function Hero() {
             <div className="aspect-[4/5] w-full overflow-hidden rounded-[4px]" style={{ border: '1px solid var(--rule)', background: 'var(--paper-deep)' }}>
               <img src="https://lh3.googleusercontent.com/pw/AP1GczM4ZyW4BxgYAH6WBkKzReUgmzV1Q229EnYbTw3PHKgUmSykUzINrdZl_9otZleK1DbOO1_6Vw4Ad4eyAqxV22J8hlugraJt65UtXRKJWlfw_WfXhh8oOblqkX-hJwHE-Oe_W-JspmB_ujWELXsp3xEUtQ=w668-h890-s-no-gm" alt="Yash on stage" referrerPolicy="no-referrer" className="w-full h-full object-cover" style={{ transformOrigin: 'center center' }} />
             </div>
-            <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.12em]" style={{ color: 'var(--ink-faint)' }}>kubecon na 2025 · atlanta · MCP security</figcaption>
+            <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.12em]" style={{ color: 'var(--ink-faint)' }}>kubecon eu 2026 · amsterdam · observability</figcaption>
           </figure>
         </div>
       </div>
@@ -136,7 +136,7 @@ function About() {
           </p>
           <p className="text-[17px] leading-[1.6] m-0" style={{ color: 'var(--ink)' }}>
             I&rsquo;m based in Hyderabad. I work globally. The best way to reach me is{' '}
-            <a href="mailto:hello@yashsharma.dev" className="link-inline" style={{ color: 'var(--ink)' }}>email</a>.
+            <a href="mailto:yashsharma2572@gmail.com" className="link-inline" style={{ color: 'var(--ink)' }}>email</a>.
           </p>
           <div className="mt-6 pt-6 grid grid-cols-3 gap-6" style={{ borderTop: '1px solid var(--rule)' }}>
             <div className="flex flex-col gap-2"><span className="font-mono text-[10px] uppercase tracking-[0.14em]" style={{ color: 'var(--ink-faint)' }}>role</span><span className="text-[14px]" style={{ color: 'var(--ink)' }}>Developer Advocate · DigitalOcean</span></div>
@@ -211,9 +211,7 @@ function SignatureTalk({ talk, reverse }) {
           ))}
         </ul>
         <div className="flex gap-6 mt-3">
-          {talk.videoId && !playing && (
-            <button onClick={() => setPlaying(true)} className="text-[14px] link-inline bg-transparent border-0 p-0 cursor-pointer" style={{ color: 'var(--ink)', font: 'inherit' }}>Watch recording &rarr;</button>
-          )}
+          <a href={talk.slidesHref || '#'} target="_blank" rel="noreferrer" className="text-[14px] link-inline" style={{ color: 'var(--ink)' }}>Slides &rarr;</a>
           <a href={watchUrl} target="_blank" rel="noreferrer" className="text-[14px] link-inline" style={{ color: 'var(--ink)' }}>Open on YouTube &rarr;</a>
         </div>
       </div>
@@ -538,11 +536,18 @@ function Footer() {
         <div className="col-span-12 md:col-span-5 flex flex-col gap-3">
           <span className="font-display text-[28px] leading-none" style={{ color: 'var(--ink)', letterSpacing: '-0.015em' }}>Yash Sharma</span>
           <p className="text-[14px] m-0 max-w-[42ch]" style={{ color: 'var(--ink-soft)' }}>Developer Advocate at DigitalOcean. CNCF maintainer, Meshery. Hyderabad, India.</p>
-          <a href="mailto:hello@yashsharma.dev" className="font-mono text-[13px] link-inline mt-2" style={{ color: 'var(--ink)' }}>hello@yashsharma.dev</a>
+          <a href="mailto:yashsharma2572@gmail.com" className="font-mono text-[13px] link-inline mt-2" style={{ color: 'var(--ink)' }}>yashsharma2572@gmail.com</a>
         </div>
         <div className="col-span-6 md:col-span-3 flex flex-col gap-2">
           <span className="font-mono text-[10px] uppercase tracking-[0.14em] mb-2" style={{ color: 'var(--ink-faint)' }}>elsewhere</span>
-          {['GitHub','LinkedIn','X / Twitter','YouTube'].map(s => <a key={s} href="#" className="text-[14px] no-underline" style={{ color: 'var(--ink)' }}>{s}</a>)}
+          {[
+            { label: 'GitHub',      href: 'https://github.com/Yashsharma1911' },
+            { label: 'LinkedIn',    href: 'https://www.linkedin.com/in/yash-sharma-4276b61b5/' },
+            { label: 'X / Twitter', href: 'https://x.com/yashsharma_f' },
+            { label: 'YouTube',     href: 'https://www.youtube.com/@YashSharma-1911' },
+          ].map(s => (
+            <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-[14px] link-inline" style={{ color: 'var(--ink)' }}>{s.label}</a>
+          ))}
         </div>
         <div className="col-span-6 md:col-span-4 flex flex-col gap-2">
           <span className="font-mono text-[10px] uppercase tracking-[0.14em] mb-2" style={{ color: 'var(--ink-faint)' }}>colophon</span>
